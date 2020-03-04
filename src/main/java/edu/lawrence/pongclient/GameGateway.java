@@ -7,7 +7,6 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
-import javafx.application.Platform;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -53,6 +52,7 @@ public class GameGateway implements PongConstants {
         ball = new Circle(WIDTH/2,HEIGHT/4,MARGIN/4);
         ball.setFill(Color.RED);
         shapes.add(ball);
+        // Once I add the shapes, the GameGateway will update them.
     }
     
     public List<Shape> getShapes() { return shapes; }
